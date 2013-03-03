@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cotraser.Isoa.Web.UI", "Cotraser.Isoa.Web.UI\Cotraser.Isoa.Web.UI.csproj", "{565D5A58-50E3-4B49-9EE8-64444CB18B0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cotraser.Isoa", "Cotraser.Isoa\Cotraser.Isoa.csproj", "{B1DFD290-7F96-49A6-8C6B-23FDA1034404}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{565D5A58-50E3-4B49-9EE8-64444CB18B0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{565D5A58-50E3-4B49-9EE8-64444CB18B0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{565D5A58-50E3-4B49-9EE8-64444CB18B0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{565D5A58-50E3-4B49-9EE8-64444CB18B0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1DFD290-7F96-49A6-8C6B-23FDA1034404}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1DFD290-7F96-49A6-8C6B-23FDA1034404}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1DFD290-7F96-49A6-8C6B-23FDA1034404}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1DFD290-7F96-49A6-8C6B-23FDA1034404}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

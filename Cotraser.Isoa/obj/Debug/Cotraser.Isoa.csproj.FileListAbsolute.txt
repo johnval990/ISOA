@@ -1,0 +1,8 @@
+D:\jvalencia\Personal\J&S\Cotraser.Isoa\Cotraser.Isoa\bin\Debug\Cotraser.Isoa.dll
+D:\jvalencia\Personal\J&S\Cotraser.Isoa\Cotraser.Isoa\bin\Debug\Cotraser.Isoa.pdb
+D:\jvalencia\Personal\J&S\Cotraser.Isoa\Cotraser.Isoa\bin\Debug\CommonLibrary.dll
+D:\jvalencia\Personal\J&S\Cotraser.Isoa\Cotraser.Isoa\bin\Debug\NLog.dll
+D:\jvalencia\Personal\J&S\Cotraser.Isoa\Cotraser.Isoa\bin\Debug\SubSonic.dll
+D:\jvalencia\Personal\J&S\Cotraser.Isoa\Cotraser.Isoa\obj\Debug\ResolveAssemblyReference.cache
+D:\jvalencia\Personal\J&S\Cotraser.Isoa\Cotraser.Isoa\obj\Debug\Cotraser.Isoa.dll
+D:\jvalencia\Personal\J&S\Cotraser.Isoa\Cotraser.Isoa\obj\Debug\Cotraser.Isoa.pdb

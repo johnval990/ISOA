@@ -1,0 +1,691 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{565D5A58-50E3-4B49-9EE8-64444CB18B0B}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cotraser.Isoa.Web.UI</RootNamespace>
+    <AssemblyName>Cotraser.Isoa.Web.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="SubSonic, Version=2.2.0.0, Culture=neutral, PublicKeyToken=eadb47849839a332, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\SubSonic.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.20710.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ApiController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AdminModels.cs" />
+    <Compile Include="Models\ApiModels.cs" />
+    <Compile Include="Models\DefaultModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Default\assets\favicon.ico" />
+    <Content Include="App_Themes\Default\assets\feature-customize.png" />
+    <Content Include="App_Themes\Default\assets\feature-design.png" />
+    <Content Include="App_Themes\Default\assets\feature-html5.png" />
+    <Content Include="App_Themes\Default\assets\feature-layout.png" />
+    <Content Include="App_Themes\Default\assets\feature-support.png" />
+    <Content Include="App_Themes\Default\assets\feature-webfonts.png" />
+    <Content Include="App_Themes\Default\assets\header-bg-3.jpg" />
+    <Content Include="App_Themes\Default\assets\lines.png" />
+    <Content Include="App_Themes\Default\assets\logos.png" />
+    <Content Include="App_Themes\Default\assets\map.png" />
+    <Content Include="App_Themes\Default\assets\pattern-black.jpg" />
+    <Content Include="App_Themes\Default\assets\portfolio-large-1.png" />
+    <Content Include="App_Themes\Default\assets\portfolio-thumbnail-1.png" />
+    <Content Include="App_Themes\Default\assets\product-1.png" />
+    <Content Include="App_Themes\Default\assets\product-2.png" />
+    <Content Include="App_Themes\Default\assets\product-3.png" />
+    <Content Include="App_Themes\Default\assets\product-4.png" />
+    <Content Include="App_Themes\Default\assets\slide-full-1.png" />
+    <Content Include="App_Themes\Default\assets\slide-half-1.png" />
+    <Content Include="App_Themes\Default\assets\slide-half-2.png" />
+    <Content Include="App_Themes\Default\assets\slide-half-3.png" />
+    <Content Include="App_Themes\Default\css\animate.css" />
+    <Content Include="App_Themes\Default\css\assets\header-bg-3.html" />
+    <Content Include="App_Themes\Default\css\bootstrap.min.css" />
+    <Content Include="App_Themes\Default\css\font-awesome.css" />
+    <Content Include="App_Themes\Default\css\style.css" />
+    <Content Include="App_Themes\Default\fancybox\blank.gif" />
+    <Content Include="App_Themes\Default\fancybox\fancybox_loading.gif" />
+    <Content Include="App_Themes\Default\fancybox\fancybox_sprite.png" />
+    <Content Include="App_Themes\Default\fancybox\jquery.fancybox.packe45f.js" />
+    <Content Include="App_Themes\Default\fancybox\jquery.fancyboxe45f.css" />
+    <Content Include="App_Themes\Default\font\fontawesome-webfont.svg" />
+    <Content Include="App_Themes\Default\js\bootstrap.min.js" />
+    <Content Include="App_Themes\Default\js\DataTables\css\demo_page.css" />
+    <Content Include="App_Themes\Default\js\DataTables\css\demo_table.css" />
+    <Content Include="App_Themes\Default\js\DataTables\css\demo_table_jui.css" />
+    <Content Include="App_Themes\Default\js\DataTables\css\jquery.dataTables.css" />
+    <Content Include="App_Themes\Default\js\DataTables\css\jquery.dataTables_themeroller.css" />
+    <Content Include="App_Themes\Default\js\DataTables\images\back_disabled.png" />
+    <Content Include="App_Themes\Default\js\DataTables\images\back_enabled.png" />
+    <Content Include="App_Themes\Default\js\DataTables\images\back_enabled_hover.png" />
+    <Content Include="App_Themes\Default\js\DataTables\images\favicon.ico" />
+    <Content Include="App_Themes\Default\js\DataTables\images\forward_disabled.png" />
+    <Content Include="App_Themes\Default\js\DataTables\images\forward_enabled.png" />
+    <Content Include="App_Themes\Default\js\DataTables\images\forward_enabled_hover.png" />
+    <Content Include="App_Themes\Default\js\DataTables\images\sort_asc.png" />
+    <Content Include="App_Themes\Default\js\DataTables\images\sort_asc_disabled.png" />
+    <Content Include="App_Themes\Default\js\DataTables\images\sort_both.png" />
+    <Content Include="App_Themes\Default\js\DataTables\images\sort_desc.png" />
+    <Content Include="App_Themes\Default\js\DataTables\images\sort_desc_disabled.png" />
+    <Content Include="App_Themes\Default\js\DataTables\js\jquery.dataTables.columnFilter.js" />
+    <Content Include="App_Themes\Default\js\DataTables\js\jquery.dataTables.js" />
+    <Content Include="App_Themes\Default\js\DataTables\js\jquery.dataTables.min.js" />
+    <Content Include="App_Themes\Default\js\DataTables\js\jquery.js" />
+    <Content Include="App_Themes\Default\js\DataTables\lang.es.txt" />
+    <Content Include="App_Themes\Default\js\DataTables\src\api\api.internal.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\api\api.methods.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\api\api.static.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\core\core.ajax.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\core\core.columns.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\core\core.constructor.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\core\core.data.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\core\core.draw.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\core\core.filter.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\core\core.info.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\core\core.init.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\core\core.length.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\core\core.page.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\core\core.processing.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\core\core.scrolling.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\core\core.sizing.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\core\core.sort.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\core\core.state.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\core\core.support.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\DataTables.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\ext\ext.classes.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\ext\ext.paging.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\ext\ext.sorting.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\ext\ext.types.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\model\model.column.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\model\model.defaults.columns.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\model\model.defaults.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\model\model.ext.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\model\model.row.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\model\model.search.js" />
+    <Content Include="App_Themes\Default\js\DataTables\src\model\model.settings.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\controller.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\index.html" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\performance\draw.html" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\performance\page.html" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\performance\sort.html" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests\1_dom\_zero_config.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\-complex_header.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\-iDraw.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\2512.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\2530-2.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\2530.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\2569.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\2600.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\2608.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\2635.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\2746-stable-sort.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\2799.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\2840-restore-table-width.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\2914-state-save-sort.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\5396-fnUpdate-arrays-mData.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\5396-fnUpdate-arrays.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\5508-xscroll-zero-content.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\6776-scrolling-table-grows.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\aaSorting.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\aaSortingFixed.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\aoColumns.bSearchable.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\aoColumns.bSortable.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\aoColumns.bUseRendered.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\aoColumns.bVisible.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\aoColumns.bVisible2.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\aoColumns.fnRender.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\aoColumns.iDataSort.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\aoColumns.sClass.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\aoColumns.sName.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\aoColumns.sTitle.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\aoColumns.sWidth.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\aoSearchCols.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\asStripClasses.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\bAutoWidth.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\bFilter.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\bInfiniteScroll.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\bInfo.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\bJQueryUI.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\bLengthChange.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\bPaginate.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\bProcessing.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\bServerSide.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\bSort.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\bSortCellsTop.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\bSortClasses.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\fnCookieCallback.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\fnCreatedCell.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\fnCreatedRow.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\fnDeleteRow.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\fnDrawCallback.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\fnFilter.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\fnFooterCallback.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\fnHeaderCallback.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\fnInfoCallback.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\fnInitComplete.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\fnRowCallback.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\fnSetColumnVis.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\fnSetColumnVis2.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\html-autodetect-sort.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\iDisplayLength.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\oLanguage.oPaginate.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\oLanguage.sInfo.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\oLanguage.sInfoEmpty.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\oLanguage.sInfoPostFix.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\oLanguage.sLengthMenu.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\oLanguage.sProcessing.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\oLanguage.sSearch.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\oLanguage.sUrl.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\oLanguage.sZeroRecords.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\oSearch.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\sAjaxSource.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\sDom.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\sPaginationType.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\sScrollXY.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\th_in_body.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\_getDataFunctions.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\_setDataFunctions.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\1_dom\_zero_config.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\39-nested-null.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\6872-default-content-missing-props.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\8549--string-sorting-nonstrings.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\aaSorting.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\aaSortingFixed.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\aoColumns.bSearchable.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\aoColumns.bSortable.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\aoColumns.bUseRendered.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\aoColumns.bVisible.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\aoColumns.fnRender.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\aoColumns.iDataSort.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\aoColumns.sClass.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\aoColumns.sName.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\aoColumns.sTitle.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\aoColumns.sWidth.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\aoSearchCols.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\asStripClasses.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\bAutoWidth.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\bFilter.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\bInfo.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\bLengthChange.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\bPaginate.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\bProcessing.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\bServerSide.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\bSort.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\bSortClasses.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\fnCreatedCell.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\fnCreatedRow.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\fnDrawCallback.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\fnFooterCallback.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\fnHeaderCallback.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\fnInitComplete.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\fnRowCallback.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\iDisplayLength.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\js_data_mixed_types.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\oLanguage.oPaginate.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\oLanguage.sInfo.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\oLanguage.sInfoEmpty.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\oLanguage.sInfoPostFix.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\oLanguage.sLengthMenu.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\oLanguage.sProcessing.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\oLanguage.sSearch.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\oLanguage.sUrl.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\oLanguage.sZeroRecords.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\oSearch.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\sAjaxSource.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\sDom.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\sPaginationType.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\2_js\_zero_config.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\aaSorting.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\aaSortingFixed.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\aoColumns.bSearchable.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\aoColumns.bSortable.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\aoColumns.bUseRendered.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\aoColumns.bVisible.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\aoColumns.fnRender.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\aoColumns.iDataSort.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\aoColumns.sClass.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\aoColumns.sName.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\aoColumns.sTitle.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\aoColumns.sWidth.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\aoSearchCols.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\asStripClasses.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\bAutoWidth.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\bFilter.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\bInfo.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\bLengthChange.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\bPaginate.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\bProcessing.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\bServerSide.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\bSort.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\bSortClasses.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\fnCreatedCell.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\fnCreatedRow.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\fnDrawCallback.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\fnHeaderCallback.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\fnInitComplete.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\fnRowCallback.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\fnServerData.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\iDisplayLength.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\oLanguage.oPaginate.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\oLanguage.sInfo.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\oLanguage.sInfoEmpty.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\oLanguage.sInfoPostFix.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\oLanguage.sLengthMenu.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\oLanguage.sLoadingRecords.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\oLanguage.sProcessing.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\oLanguage.sSearch.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\oLanguage.sUrl.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\oLanguage.sZeroRecords.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\oSearch.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\sAjaxDataProp.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\sAjaxDataProp2.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\sAjaxSource.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\sDom.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\sPaginationType.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\3_ajax\_zero_config.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\-iDraw.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\2440.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\2569.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\2600.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\aaSorting.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\aaSortingFixed.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\aoColumns.bSearchable.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\aoColumns.bSortable.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\aoColumns.bUseRendered.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\aoColumns.bVisible.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\aoColumns.fnRender.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\aoColumns.sClass.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\aoColumns.sName.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\aoColumns.sTitle.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\aoColumns.sWidth.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\aoSearchCols.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\asStripClasses.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\bAutoWidth.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\bFilter.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\bInfiniteScroll.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\bInfo.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\bLengthChange.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\bPaginate.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\bProcessing.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\bServerSide.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\bSort.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\bSortClasses.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\fnCreatedCell.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\fnCreatedRow.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\fnDrawCallback.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\fnHeaderCallback.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\fnInitComplete.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\fnRowCallback.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\iDeferLoading.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\iDisplayLength.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\oLanguage.oPaginate.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\oLanguage.sInfo.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\oLanguage.sInfoEmpty.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\oLanguage.sInfoPostFix.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\oLanguage.sLengthMenu.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\oLanguage.sProcessing.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\oLanguage.sSearch.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\oLanguage.sUrl.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\oLanguage.sZeroRecords.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\oSearch.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\sAjaxDataProp.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\sAjaxSource.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\sDom.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\sPaginationType.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\4_server-side\_zero_config.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\aaSorting.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\aaSortingFixed.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\aoColumns.bSearchable.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\aoColumns.bSortable.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\aoColumns.bUseRendered.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\aoColumns.bVisible.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\aoColumns.fnRender.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\aoColumns.iDataSort.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\aoColumns.sClass.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\aoColumns.sName.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\aoColumns.sTitle.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\aoColumns.sWidth.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\aoSearchCols.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\asStripClasses.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\bAutoWidth.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\bFilter.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\bInfo.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\bLengthChange.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\bPaginate.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\bProcessing.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\bServerSide.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\bSort.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\bSortClasses.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\fnDrawCallback.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\fnHeaderCallback.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\fnInitComplete.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\fnRowCallback.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\fnServerData.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\iDisplayLength.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\oLanguage.oPaginate.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\oLanguage.sInfo.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\oLanguage.sInfoEmpty.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\oLanguage.sInfoPostFix.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\oLanguage.sLengthMenu.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\oLanguage.sProcessing.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\oLanguage.sSearch.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\oLanguage.sUrl.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\oLanguage.sZeroRecords.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\oSearch.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\sAjaxSource.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\sDom.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\sPaginationType.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\_zero_config.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\_zero_config_arrays_subobjects.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\_zero_config_deep.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\_zero_config_mDataProp.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\_zero_config_null_source.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\_zero_config_objects.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\5_ajax_objects\_zero_config_objects_subarrays.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\aaSorting.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\aaSortingFixed.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\aoColumns.bSearchable.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\aoColumns.bSortable.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\aoColumns.bUseRendered.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\aoColumns.bVisible.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\aoColumns.fnRender.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\aoColumns.iDataSort.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\aoColumns.sClass.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\aoColumns.sName.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\aoColumns.sTitle.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\aoColumns.sWidth.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\aoSearchCols.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\asStripClasses.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\bAutoWidth.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\bFilter.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\bInfo.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\bLengthChange.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\bPaginate.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\bProcessing.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\bServerSide.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\bSort.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\bSortClasses.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\fnDrawCallback.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\fnHeaderCallback.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\fnInitComplete.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\fnRowCallback.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\fnServerData.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\iDisplayLength.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\oLanguage.oPaginate.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\oLanguage.sInfo.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\oLanguage.sInfoEmpty.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\oLanguage.sInfoPostFix.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\oLanguage.sLengthMenu.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\oLanguage.sProcessing.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\oLanguage.sSearch.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\oLanguage.sUrl.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\oLanguage.sZeroRecords.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\oSearch.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\sAjaxDataProp.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\sAjaxDataProp2.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\sAjaxSource.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\sDom.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\sPaginationType.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\tests_onhold\6_delayed_rendering\_zero_config.js" />
+    <Content Include="App_Themes\Default\js\DataTables\unit_testing\unit_test.js" />
+    <Content Include="App_Themes\Default\js\html5-3.4-respond-1.1.0.min.js" />
+    <Content Include="App_Themes\Default\js\html5shiv.js" />
+    <Content Include="App_Themes\Default\js\jquery-1.8.2.min.js" />
+    <Content Include="App_Themes\Default\js\jquery.anchor.js" />
+    <Content Include="App_Themes\Default\js\jquery.fancybox.js" />
+    <Content Include="App_Themes\Default\js\jquery.min.js" />
+    <Content Include="App_Themes\Default\js\modernizr.js" />
+    <Content Include="App_Themes\Default\js\script.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Logs\TextFile1.txt" />
+    <Content Include="References\NLog.dll" />
+    <Content Include="References\SubSonic.dll" />
+    <Content Include="Views\Admin\UserDetail.aspx" />
+    <Content Include="Views\Admin\Users.aspx" />
+    <Content Include="Views\Default\Index.aspx" />
+    <Content Include="Views\Default\Login.aspx" />
+    <Content Include="Views\Shared\_SiteMenu.aspx" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Default.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Themes\Default\font\fontawesome-webfont.ttf" />
+    <None Include="App_Themes\Default\font\fontawesome-webfont.woff" />
+    <Content Include="Web.config" />
+    <Content Include="NLog.config" />
+    <Content Include="Resources\SiteMenu\Web.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="App_Themes\Default\js\DataTables\images\Sorting icons.psd" />
+    <None Include="App_Themes\Default\js\DataTables\unit_testing\controller.php" />
+    <None Include="App_Themes\Default\js\DataTables\unit_testing\performance\large.php" />
+    <None Include="App_Themes\Default\js\DataTables\unit_testing\templates\-complex_header.php" />
+    <None Include="App_Themes\Default\js\DataTables\unit_testing\templates\2512.php" />
+    <None Include="App_Themes\Default\js\DataTables\unit_testing\templates\6776.php" />
+    <None Include="App_Themes\Default\js\DataTables\unit_testing\templates\complex_header_2.php" />
+    <None Include="App_Themes\Default\js\DataTables\unit_testing\templates\deferred_table.php" />
+    <None Include="App_Themes\Default\js\DataTables\unit_testing\templates\dom_data.php" />
+    <None Include="App_Themes\Default\js\DataTables\unit_testing\templates\dom_data_th.php" />
+    <None Include="App_Themes\Default\js\DataTables\unit_testing\templates\dom_data_two_headers.php" />
+    <None Include="App_Themes\Default\js\DataTables\unit_testing\templates\dymanic_table.php" />
+    <None Include="App_Themes\Default\js\DataTables\unit_testing\templates\empty_table.php" />
+    <None Include="App_Themes\Default\js\DataTables\unit_testing\templates\html_table.php" />
+    <None Include="App_Themes\Default\js\DataTables\unit_testing\templates\js_data.php" />
+    <None Include="App_Themes\Default\js\DataTables\unit_testing\templates\js_data_mixed_types.php" />
+    <None Include="App_Themes\Default\js\DataTables\unit_testing\templates\two_tables.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cotraser.Isoa\Cotraser.Isoa.csproj">
+      <Project>{B1DFD290-7F96-49A6-8C6B-23FDA1034404}</Project>
+      <Name>Cotraser.Isoa</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3323</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

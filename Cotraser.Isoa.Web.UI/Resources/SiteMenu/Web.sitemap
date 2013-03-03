@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="" title="Menu"  description="">
+      
+      <siteMapNode url="~/" title="Inicio" roles="*" description="">
+      </siteMapNode>
+
+      <siteMapNode url="" title="Administración" roles="1" description="">
+        <siteMapNode url="~/Campaigns/CampaignList.aspx" title="Campañas" roles="*"  description=""  />
+        <siteMapNode url="~/ReferredStatus/ReferredStatusList.aspx" title="Estados de referidos" roles="2"  description=""  />
+        <siteMapNode url="~/Security/Users.aspx" title="Usuarios" roles="1"  description=""  />
+      </siteMapNode>
+      
+    </siteMapNode>
+</siteMap>

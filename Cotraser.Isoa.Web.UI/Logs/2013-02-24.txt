@@ -1,0 +1,56 @@
+2013-02-24 15:10:58.8143|ERROR|Cotraser.Isoa.Common.Exception.ExceptionPolicy|A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SubSonic.SqlDataProvider.CreateConnection(String newConnectionString)
+   at SubSonic.SqlDataProvider.CreateConnection()
+   at SubSonic.AutomaticConnectionScope..ctor(DataProvider provider)
+   at SubSonic.SqlDataProvider.GetReader(QueryCommand qry)
+   at SubSonic.DataService.GetReader(QueryCommand cmd)
+   at SubSonic.ReadOnlyRecord`1.LoadByParam(String columnName, Object paramValue)
+   at Cotraser.Isoa.Domain.User..ctor(String columnName, Object columnValue) in D:\jvalencia\Personal\J&S\Cotraser.Isoa\Cotraser.Isoa\Domain\Generated\User.cs:line 99
+   at Cotraser.Isoa.Systems.Security.UserService..ctor(String columnName, Object columnValue) in D:\jvalencia\Personal\J&S\Cotraser.Isoa\Cotraser.Isoa\Systems\Security\UserService.cs:line 20
+   at Cotraser.Isoa.Systems.Security.UserService.GetByUserName(String userName) in D:\jvalencia\Personal\J&S\Cotraser.Isoa\Cotraser.Isoa\Systems\Security\UserService.cs:line 33
+   at Cotraser.Isoa.Systems.SecuritySystem.GetSecurityContextByUserName(String userName) in D:\jvalencia\Personal\J&S\Cotraser.Isoa\Cotraser.Isoa\Systems\SecuritySystem.cs:line 102
+   at Cotraser.Isoa.Systems.SecuritySystem.LoginUser(String UserName, String Password) in D:\jvalencia\Personal\J&S\Cotraser.Isoa\Cotraser.Isoa\Systems\SecuritySystem.cs:line 36
+   at Cotraser.Isoa.Web.UI.Controllers.DefaultController.Login(LoginModel model, String returnUrl) in D:\jvalencia\Personal\J&S\Cotraser.Isoa\Cotraser.Isoa.Web.UI\Controllers\DefaultController.cs:line 36
+2013-02-24 15:11:20.2495|ERROR|Cotraser.Isoa.Common.Exception.ExceptionPolicy|A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning()
+   at System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, SqlConnection owningObject)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, TimeoutTimer timeout)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, TimeoutTimer timeout, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at SubSonic.SqlDataProvider.CreateConnection(String newConnectionString)
+   at SubSonic.SqlDataProvider.CreateConnection()
+   at SubSonic.AutomaticConnectionScope..ctor(DataProvider provider)
+   at SubSonic.SqlDataProvider.GetReader(QueryCommand qry)
+   at SubSonic.DataService.GetReader(QueryCommand cmd)
+   at SubSonic.ReadOnlyRecord`1.LoadByParam(String columnName, Object paramValue)
+   at Cotraser.Isoa.Domain.User..ctor(String columnName, Object columnValue) in D:\jvalencia\Personal\J&S\Cotraser.Isoa\Cotraser.Isoa\Domain\Generated\User.cs:line 99
+   at Cotraser.Isoa.Systems.Security.UserService..ctor(String columnName, Object columnValue) in D:\jvalencia\Personal\J&S\Cotraser.Isoa\Cotraser.Isoa\Systems\Security\UserService.cs:line 20
+   at Cotraser.Isoa.Systems.Security.UserService.GetByUserName(String userName) in D:\jvalencia\Personal\J&S\Cotraser.Isoa\Cotraser.Isoa\Systems\Security\UserService.cs:line 33
+   at Cotraser.Isoa.Systems.SecuritySystem.GetSecurityContextByUserName(String userName) in D:\jvalencia\Personal\J&S\Cotraser.Isoa\Cotraser.Isoa\Systems\SecuritySystem.cs:line 102
+   at Cotraser.Isoa.Systems.SecuritySystem.LoginUser(String UserName, String Password) in D:\jvalencia\Personal\J&S\Cotraser.Isoa\Cotraser.Isoa\Systems\SecuritySystem.cs:line 36
+   at Cotraser.Isoa.Web.UI.Controllers.DefaultController.Login(LoginModel model, String returnUrl) in D:\jvalencia\Personal\J&S\Cotraser.Isoa\Cotraser.Isoa.Web.UI\Controllers\DefaultController.cs:line 36
